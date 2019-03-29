@@ -21,20 +21,20 @@ module.exports = function(RED) {
                         for(var i=0;i<nodeContext.prop.length;i++){
                             if(IBAN.isValidBBAN(nodeContext.prop[i].countryCode, nodeContext.prop[i].bban)){
                                 nodeContext.prop[i].iban=IBAN.fromBBAN(nodeContext.prop[i].countryCode, nodeContext.prop[i].bban);
-                                nodeContext.prop[i].isValidBban=true;
+                                nodeContext.prop[i].isValidIban=true;
                             }
                             else{
-                                nodeContext.prop[i].isValidBban=false;
-                                node.send([null,msg]);
-                                return;
+                                nodeContext.prop[i].isValidIban=false;
+                                nodeContext.prop.returnError = true;
                             }
                         }
-                        node.send([msg,null]);
+                        nodeContext.prop.returnError? node.send([null,msg]) : node.send([msg,null]);
                     }
                     else{
                         //Single conversion
                         if(IBAN.isValidBBAN(nodeContext.prop.countryCode, nodeContext.prop.bban)){
                             nodeContext.prop.iban=IBAN.fromBBAN(nodeContext.prop.countryCode, nodeContext.prop.bban);
+                            nodeContext.prop[i].isValidBban=true;
                             node.send([msg,null]);
                         }
                         else{
@@ -54,11 +54,10 @@ module.exports = function(RED) {
                             }
                             else{
                                 nodeContext.prop[i].isValidIban=false;
-                                node.send([null,msg]);
-                                return;
+                                nodeContext.prop.returnError = true;
                             }
                         }
-                        node.send([msg,null]);
+                        nodeContext.prop.returnError? node.send([null,msg]) : node.send([msg,null]);
                     }
                     else{
                         //Single conversion
