@@ -1,0 +1,55 @@
+
+<script type="text/x-red" data-template-name="IbanUtils">
+    <div class="form-row">
+        <label for="node-input-property"><i class="fa fa-ellipsis-h"></i> <span data-i18n="node-red:common.label.property"></span></label>
+        <input type="text" id="node-input-property" style="width:70%;"/>
+    </div>
+    <div class="form-row">
+        <label for="node-input-action"><i class="fa fa-bolt"></i> Action</label>
+        <select id="node-input-action" style="width:60%; margin-right:5px;">
+            <option value="bban2iban">bban2iban</option>
+            <option value="iban2bban">iban2bban</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-tips" id="node-tip">Tip: working JSON 
+        {
+            "iban": "BE68539007547034",
+            "separator": "#"
+        }
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="IbanUtils">
+    <p>A simple node to provide IBAN & BBAN validation, formatting and conversion using <a>https://github.com/arhs/iban.js</a> </p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('IbanUtils', {
+        color: "#E2D96E",
+        category: 'function',
+        defaults: {
+            name: {value:"IbanUtils"},
+            property: {value:"payload",required:true},
+            action: {value:"bban2iban"},
+        },
+        inputs: 1,
+        outputs: 2,
+        icon: "IbanUtils.png",
+        label: function() {
+            return this.name || "iban-utils";
+        },
+        labelStyle: function() {
+            return this.name ? "node_label_italic" : "";
+        },
+        oneditprepare: function() {
+            if (this.property === undefined) {
+                $("#node-input-property").val("payload");
+            }
+            $("#node-input-property").typedInput({default:'msg',types:['msg']});
+        }
+    });
+</script>

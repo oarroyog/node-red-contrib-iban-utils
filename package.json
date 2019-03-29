@@ -1,0 +1,59 @@
+{
+  "_from": "node-red-contrib-ibanutils",
+  "_id": "node-red-contrib-ibanutils@0.0.3",
+  "_inBundle": false,
+  "_integrity": "sha512-TQMRdjY3pL9gTLBV9biD++X71BUrl456h+mFuonCDiE+39EiZQF1U7xj0Ya5VUqntRZHD2GaKMpJ4QdcZEG7/Q==",
+  "_location": "/node-red-contrib-ibanutils",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "node-red-contrib-ibanutils",
+    "name": "node-red-contrib-ibanutils",
+    "escapedName": "node-red-contrib-ibanutils",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/node-red-contrib-ibanutils/-/node-red-contrib-ibanutils-0.0.3.tgz",
+  "_shasum": "87f7340f6a162de7bd25dbb41f6b70486aa66fa9",
+  "_spec": "node-red-contrib-ibanutils",
+  "_where": "C:\\Users\\oarroyog\\node_modules",
+  "author": {
+    "name": "Oscar Arroyo"
+  },
+  "bugs": {
+    "url": "https://github.com/oarroyog/node-red-contrib-iban-utils/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "iban": "^0.0.10"
+  },
+  "deprecated": false,
+  "description": "iban utils nodered encapsulation",
+  "homepage": "https://github.com/oarroyog/node-red-contrib-iban-utils#readme",
+  "keywords": [
+    "iban",
+    "nodered"
+  ],
+  "license": "ISC",
+  "main": "IbanUtils.js",
+  "name": "node-red-contrib-ibanutils",
+  "node-red": {
+    "nodes": {
+      "IbanUtils": "IbanUtils.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oarroyog/node-red-contrib-iban-utils.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.3"
+}
