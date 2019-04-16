@@ -15,11 +15,14 @@
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
-    <div class="form-tips" id="node-tip">Tip: working JSON 
-        {
-            "iban": "BE68539007547034",
-            "separator": "#"
-        }
+    <p>IbanUtils node can transform iban & bban in both ways.</p>
+    <p>Once <b>Property</b> is customized with the var we want to transform, just select the <b>Action.</b></p>
+    <p>First output will be used if everythig works without errors, and second if not.</p>
+    <p>Arrays of values are supported</p>
+    
+    <div class="form-tips" id="node-tip">
+        Tip: working JSON 
+        <p><b>msg.iban =  [{ "iban": "BE68539007547034"},{ "iban": "BXE68539007547034"},{ "iban": "BE68539007547034"}];</b></p>
     </div>
 </script>
 

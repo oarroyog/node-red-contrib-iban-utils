@@ -1,6 +1,6 @@
 {
   "_from": "node-red-contrib-ibanutils",
-  "_id": "node-red-contrib-ibanutils@0.0.4",
+  "_id": "node-red-contrib-ibanutils@0.0.5",
   "_inBundle": false,
   "_integrity": "sha512-TQMRdjY3pL9gTLBV9biD++X71BUrl456h+mFuonCDiE+39EiZQF1U7xj0Ya5VUqntRZHD2GaKMpJ4QdcZEG7/Q==",
   "_location": "/node-red-contrib-ibanutils",
@@ -19,7 +19,7 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/node-red-contrib-ibanutils/-/node-red-contrib-ibanutils-0.0.4.tgz",
+  "_resolved": "https://registry.npmjs.org/node-red-contrib-ibanutils/-/node-red-contrib-ibanutils-0.0.5.tgz",
   "_shasum": "87f7340f6a162de7bd25dbb41f6b70486aa66fa9",
   "_spec": "node-red-contrib-ibanutils",
   "_where": "C:\\Users\\oarroyog\\node_modules",
@@ -29,7 +29,9 @@
   "bugs": {
     "url": "https://github.com/oarroyog/node-red-contrib-iban-utils/issues"
   },
-  "bundleDependencies": false,
+  "bundleDependencies": [
+    "iban"
+  ],
   "dependencies": {
     "iban": "^0.0.10"
   },
@@ -55,5 +57,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "0.0.4"
+  "version": "0.0.5"
 }
